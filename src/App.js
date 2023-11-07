@@ -1,4 +1,4 @@
-import Header from './components/Header/Header';
+import Header from './components/frontend/Header/Header';
 
 function App(props) {
     return (

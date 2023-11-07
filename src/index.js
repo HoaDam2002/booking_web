@@ -9,7 +9,9 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import $ from 'jquery';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/Home';
+
+///////--------------------------------------------------------------------------------------------
+import Home from './pages/frontend/Home/Home';
 // import Popper from 'popper.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

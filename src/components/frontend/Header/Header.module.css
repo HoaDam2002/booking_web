@@ -1,0 +1,121 @@
+/* Nav pc */
+
+.nav-link-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link-item {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.btn-login {
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    background-color: #49735a !important;
+    border-radius: 20px;
+    color: #fff !important;
+    margin: 0;
+}
+
+.nav-avatar-link {
+    border-radius: 50%;
+    padding: 0px 0px !important;
+}
+
+.nav-avatar {
+    position: relative;
+}
+
+.nav-avatar:hover .dropdown-account {
+    display: block;
+}
+
+.nav-avatar::before {
+    position: absolute;
+    content: '';
+    width: 200px;
+    height: 10px;
+    right: 0;
+    top: 40px;
+    background-color: transparent;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.active {
+    border-bottom: 2px solid #49735a;
+}
+
+.dropdown-account {
+    position: absolute;
+    display: none;
+    min-width: 200px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    top: 50px;
+    right: 0px;
+    box-shadow: 0 0 10px 1px #999999;
+    overflow: hidden;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* nav mobile */
+.nav_overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 2;
+}
+
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 280px;
+    max-width: 100%;
+    background-color: #fff;
+    padding: 0;
+    transition: right 0.5s ease;
+    z-index: 3;
+
+    /* box-shadow: 0px, 0px, 10px, 4px, rgba(0, 0, 0, 1); */
+}
+.nav-mobile-item {
+    list-style: none;
+}
+
+.nav-mobile-link {
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #333;
+}
+.nav-mobile-link > span {
+    margin-left: 10px;
+}
+
+.nav-mobile-link > i {
+    display: inline-block;
+    width: 20px;
+    margin: 0 10px 0 15px;
+}
+
+.active-mobile {
+    background-color: rgba(0, 0, 0, 0.1);
+}
