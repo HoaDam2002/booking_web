@@ -10,7 +10,7 @@ function Home() {
             <Slider />
 
             {/* Location */}
-            <section className={cx('location')} style={{ margin: '100px 0 0 0' }}>
+            <section className={cx('location')}>
                 <div className="container">
                     <h2 className={cx('location-content')}>Choose Your Location</h2>
                     <div className={cx('row', 'location-box')}>
