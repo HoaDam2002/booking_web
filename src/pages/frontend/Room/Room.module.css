@@ -1,0 +1,52 @@
+.slider {
+    margin: 0 0 40px 0;
+}
+
+.img-room {
+    width: 100%;
+    height: 245px;
+}
+
+.status-room {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status {
+    font-size: 15px;
+    color: rgb(6, 76, 73);
+    /* margin: 20px 0; */
+}
+
+.infor-rooms {
+    margin: 5px 10px;
+}
+
+.name-room {
+    color: rgb(6, 76, 73);
+    font-size: 30px;
+}
+
+.price-room {
+    color: rgb(6, 76, 73);
+    font-size: 17px;
+    /* margin-top: -10px; */
+}
+
+.bottom-rooms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px;
+    background-color: rgba(6, 76, 73, 0.2);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
