@@ -66,7 +66,7 @@ function Room() {
                                         <Link
                                             className="btn btn-primary"
                                             style={{ backgroundColor: 'rgb(6, 76, 73)' }}
-                                            to={'#'}
+                                            to={'/rooms-details'}
                                         >
                                             Book Now
                                         </Link>

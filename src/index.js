@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 ///////--------------------------------------------------------------------------------------------
 import Home from './pages/frontend/Home/Home';
 import Room from './pages/frontend/Room/Rome';
+import RoomDetail from './pages/frontend/Room-Detail/Room-detail';
 // import Popper from 'popper.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,6 +24,7 @@ root.render(
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/rooms" element={<Room />} />
+                    <Route path="/rooms-details" element={<RoomDetail />} />
                 </Routes>
             </App>
         </Router>

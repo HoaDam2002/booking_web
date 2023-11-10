@@ -1,0 +1,21 @@
+.main-roomDetail {
+    margin: 100px 0 200px 0;
+}
+
+.img-roomDetail {
+    width: 100%;
+    height: auto;
+}
+
+.title-room {
+    font-size: 50px;
+    text-align: center;
+    margin: 20px 0 50px 0;
+}
+
+.time-input {
+    width: 100%;
+    background-color: bisque;
+    color: red;
+    border-radius: 5px;
+}
