@@ -43,7 +43,6 @@ function SearchHorizontal() {
                         <i>
                             <FontAwesomeIcon icon={faArrowRight} />
                         </i>
-
                         <DatePicker
                             wrapperClassName={cx('custom-datepicker-wrapper')}
                             selected={endDate}
