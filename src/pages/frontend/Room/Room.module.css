@@ -50,3 +50,13 @@
     line-height: 40px;
     border-radius: 50%;
 }
+
+.main-room {
+    margin-top: 50px;
+}
+
+.title-room {
+    font-size: 50px;
+    text-align: center;
+    margin: 80px 0 40px 0;
+}

@@ -61,7 +61,7 @@ function Header() {
                                 </Link>
                             </li>
                             <li className={cx('nav-item', 'mx-1')} onClick={handleActiveNav}>
-                                <Link className={cx('nav-link', 'nav-link-item', 'text-black', 'px-3')} to="/blogs">
+                                <Link className={cx('nav-link', 'nav-link-item', 'text-black', 'px-3')} to="/rooms">
                                     Room
                                 </Link>
                             </li>

@@ -3,13 +3,16 @@ import styles from './Room.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShower, faTable, faTv, faWifi } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import SearchHorizontal from '~/components/frontend/SearchHorizontal/SearchHorizontal';
+import Slider from '~/components/frontend/Slider/Slider';
 
 const cx = classNames.bind(styles);
 
 function Room() {
     return (
         <>
-            <section className={cx('slider')}>
+            {/* <SearchHorizontal></SearchHorizontal> */}
+            {/* <section className={cx('slider')}>
                 <div id="carouselExampleCaptions" className="carousel slide">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
@@ -26,10 +29,15 @@ function Room() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+            <Slider></Slider>
 
-            <section>
+            <section className={cx('main-room')}>
                 <div className="container">
+                    <div>
+                        <p className={cx('title-room')}>Our Rooms</p>
+                    </div>
+
                     <div className="row">
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
                             <div className="shadow" style={{ paddingBottom: '10px' }}>

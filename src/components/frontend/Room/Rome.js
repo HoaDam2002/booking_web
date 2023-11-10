@@ -1,15 +1,13 @@
 import classNames from 'classnames/bind';
-import styte
+
 const cx = classNames.bind(styles);
 
 function Room() {
-    return ( 
+    return (
         <>
-            <div className="">
-
-            </div>
+            <div className=""></div>
         </>
-     );
+    );
 }
 
 export default Room;
