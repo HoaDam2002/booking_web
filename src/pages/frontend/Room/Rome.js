@@ -11,25 +11,6 @@ const cx = classNames.bind(styles);
 function Room() {
     return (
         <>
-            {/* <SearchHorizontal></SearchHorizontal> */}
-            {/* <section className={cx('slider')}>
-                <div id="carouselExampleCaptions" className="carousel slide">
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img
-                                src="https://haianhland.com/wp-content/uploads/2019/10/hotel-l%C3%A0-g%C3%AC.jpg"
-                                className="d-block w-100"
-                                alt="..."
-                                style={{ maxHeight: '500px', objectFit: 'cover' }}
-                            />
-                            <div className="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
             <Slider></Slider>
 
             <section className={cx('main-room')}>
@@ -40,7 +21,7 @@ function Room() {
 
                     <div className="row">
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px' }}>
+                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -66,7 +47,7 @@ function Room() {
                                         <Link
                                             className="btn btn-primary"
                                             style={{ backgroundColor: 'rgb(6, 76, 73)' }}
-                                            to={'/rooms-details'}
+                                            to={'/room-details'}
                                         >
                                             Book Now
                                         </Link>
@@ -75,7 +56,7 @@ function Room() {
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px' }}>
+                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -110,7 +91,7 @@ function Room() {
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px' }}>
+                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -145,7 +126,7 @@ function Room() {
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px' }}>
+                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -180,7 +161,7 @@ function Room() {
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px' }}>
+                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -214,8 +195,8 @@ function Room() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-6 col-lg-3 " style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px' }}>
+                        <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
+                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"

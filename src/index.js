@@ -24,7 +24,7 @@ root.render(
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/rooms" element={<Room />} />
-                    <Route path="/rooms-details" element={<RoomDetail />} />
+                    <Route path="/room-details" element={<RoomDetail />} />
                 </Routes>
             </App>
         </Router>

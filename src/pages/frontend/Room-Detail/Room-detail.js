@@ -6,7 +6,8 @@ import StarRatings from 'react-star-ratings';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DatePicker from 'react-datepicker';
-import { faArrowRight, faCalendarDays, faShower, faTv, faWifi } from '@fortawesome/free-solid-svg-icons';
+
+import { faArrowRight, faCalendarDays, faShower, faStar, faTv, faWifi } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -19,6 +20,15 @@ function RoomDetail() {
         setRatings(newRating);
         //code...
     }
+
+    const isDateDisabled = (date) => {
+        const currentDate = new Date();
+        return date > currentDate;
+    };
+
+    const isEndDateDisabled = (date) => {
+        return date > startDate;
+    };
 
     return (
         <>
@@ -81,48 +91,72 @@ function RoomDetail() {
                             </div>
                         </div>
                         <div className="col-4">
-                            <div>
-                                <div className="mb-3">
-                                    {/* <label htmlFor="exampleFormControlInput1" className="form-label">
-                                        Email address
-                                    </label>
-                                    <input
-                                        type="email"
-                                        className="form-control"
-                                        id="exampleFormControlInput1"
-                                        placeholder="name@example.com"
-                                    /> */}
+                            <div className={cx('search')}>
+                                <div className={cx('head-form')}>
+                                    <p className={cx('price')}>$20/Pernight</p>
+                                    <div className={cx('rating')}>
+                                        <p className={cx('numberRating')}>5</p>
+                                        <div className={cx('star')}>
+                                            <FontAwesomeIcon icon={faStar} style={{ color: '#fbff00' }} />
+                                        </div>
 
-                                    <div className="time-input">
-                                        <div>
-                                            <DatePicker
-                                                selected={startDate}
-                                                onChange={(date) => setStartDate(date)}
-                                                className="form-control"
-                                            />
-                                        </div>
-                                        <div>
-                                            <DatePicker
-                                                selected={startDate}
-                                                onChange={(date) => setStartDate(date)}
-                                                className="form-control"
-                                            />
-                                        </div>
-                                        <div>
-                                            <label htmlFor="exampleFormControlInput1" className="form-label">
-                                                People
-                                            </label>
-                                            <input
-                                                type="email"
-                                                className="form-control"
-                                                id="exampleFormControlInput1"
-                                                placeholder="name@example.com"
-                                            />
-                                        </div>
-                                        <div>
-                                            <button>Booking Now</button>
-                                        </div>
+                                        <p className={cx('comments')}>
+                                            {' '}
+                                            <p className={cx('comments')}>-</p> 21 Comments
+                                        </p>
                                     </div>
+                                </div>
+                                <form className={cx('form-booking')}>
+                                    <div className={cx('boder')}>
+                                        <div className={cx('time-input')}>
+                                            <DatePicker
+                                                wrapperClassName={cx('custom-datepicker-wrapper')}
+                                                selected={startDate}
+                                                onChange={(date) => setStartDate(date)}
+                                                selectsStart
+                                                startDate={startDate}
+                                                endDate={endDate}
+                                                dateFormat="dd/MM/yyyy"
+                                                monthsShown={2}
+                                                placeholderText="Check In Time"
+                                                className={cx('input')}
+                                                filterDate={isDateDisabled}
+                                            />
+                                            <DatePicker
+                                                wrapperClassName={cx('custom-datepicker-wrapper')}
+                                                selected={endDate}
+                                                onChange={(date) => setEndDate(date)}
+                                                selectsStart
+                                                startDate={startDate}
+                                                endDate={endDate}
+                                                dateFormat="dd/MM/yyyy"
+                                                monthsShown={2}
+                                                placeholderText="Check Out Time"
+                                                className={cx('input')}
+                                                filterDate={isEndDateDisabled}
+                                            />
+                                        </div>
+                                        <select className={cx('input')}>
+                                            <option>alo</option>
+                                        </select>
+                                    </div>
+
+                                    <Link
+                                        className="btn btn-primary"
+                                        style={{ backgroundColor: 'rgb(6, 76, 73)', width: '100%' }}
+                                        to={'#'}
+                                    >
+                                        Book Now
+                                    </Link>
+                                </form>
+                                <div className={cx('inform', 'inform-price')}>
+                                    <p>$20/Pernight</p>
+                                    <p>$20</p>
+                                </div>
+                                <div className={cx('separator')}></div>
+                                <div className={cx('inform', 'inform-total')}>
+                                    <p>Total</p>
+                                    <p>$20</p>
                                 </div>
                             </div>
                         </div>
