@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import $ from 'jquery';
+import 'normalize.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
