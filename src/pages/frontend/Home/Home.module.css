@@ -23,12 +23,12 @@
 }
 
 .location-box::-webkit-scrollbar-thumb {
-    background-color: #064749; /* Màu của phần thanh cuộn */
-    border-radius: 4px; /* Độ cong góc của phần thanh cuộn */
+    background-color: #064749;
+    border-radius: 4px;
 }
 
 .location-box.custom-scrollbar::-webkit-scrollbar-track {
-    background-color: transparent; /* Màu của phần nền thanh cuộn */
+    background-color: transparent;
 }
 
 .card-location {
@@ -98,7 +98,7 @@ Services
 /* -----------------------------------------
 Blogs
 --------------------------------------------*/
-.blog {
+/* .blog {
     padding-bottom: 100px;
     border-bottom: 1px solid #99999999;
 }
@@ -123,13 +123,12 @@ Blogs
     background-color: transparent;
 } */
 
-.title-blog {
+/* .title-blog {
     text-align: center;
     margin: 100px 0 50px 0;
 }
 
 .blog-box {
-    /* background-color: #064749; */
     border-radius: 30px;
     overflow: hidden;
 }
@@ -139,7 +138,7 @@ Blogs
     border-radius: 30px;
     overflow: hidden;
 
-    /* padding: 15px; */
+
 }
 
 .info-blog:hover {
@@ -173,6 +172,69 @@ Blogs
 
 .icon-time {
     margin: 0 10px 0 0;
+} */
+
+/* -------------------------------------
+Blog
+---------------------------------------*/
+.blog {
+    padding: 100px 0;
+}
+
+.blog-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-show {
+    flex-wrap: nowrap;
+}
+
+.blog-slide {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* padding: 0 !important; */
+}
+
+.blog-content {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: #fff;
+}
+
+.blog-content a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.blog-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.blog-control button {
+    max-width: 42px;
+    padding: 10px 12px;
+    outline: none;
+    background-color: transparent;
+    /* border: none; */
+    border-radius: 50%;
+}
+
+.blog-control button:hover {
+}
+
+.blog-control-right {
+    right: 0;
+}
+.blog-control-left {
+    left: 0;
 }
 
 /* ----------------------------------------------------------------------------- */

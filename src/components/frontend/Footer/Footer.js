@@ -13,6 +13,7 @@ function Footer() {
                 <div className="container">
                     <div className={cx('footer-box')}>
                         <div className="row">
+                            {/* col-số */}
                             <div className={cx('col-12', 'col-md-4', 'info-footer')}>
                                 <Link className={cx('link-logo')}>
                                     <img
@@ -24,7 +25,7 @@ function Footer() {
                                         // alt="logo"
                                     />
                                 </Link>
-                                <p className={cx('content-footer', 'text-footer')}>
+                                <p className={cx('content-footer')}>
                                     We inspire and reach millions of travelers across 90 local websites
                                 </p>
                                 <ul className={cx('social-network')}>
@@ -65,14 +66,14 @@ function Footer() {
                             <div className={cx('col-12', 'col-md-4')}>
                                 <h3 className={cx('title-footer')}>NEW LATEST</h3>
                                 <span className={cx('des-latest')}>Get the latest updates and offers.</span>
-                                <form class="form-floating mb-3">
+                                <form className="form-floating mb-3">
                                     <input
                                         type="email"
-                                        class="form-control"
+                                        className="form-control"
                                         id="floatingInput"
                                         placeholder="name@example.com"
                                     />
-                                    <label for="floatingInput">Email address</label>
+                                    <label htmlFor="floatingInput">Email address</label>
                                     <button className={cx('btn', 'btn-send')}>
                                         <Link to={'/send'}>
                                             <FontAwesomeIcon icon={faPaperPlane} />
