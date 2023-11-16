@@ -16,30 +16,28 @@
 .search {
     width: 100%;
     max-height: 375px;
-    box-shadow: 2px 2px 5px #888888;
     padding: 25px;
     border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .head-form {
     display: flex;
     justify-content: space-between;
     margin-top: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    align-items: center;
 }
 
 .numberRating {
-    font-size: 20px;
-    margin-right: 5px;
-    /* line-height: 17px; */
-}
-
-.star {
-    line-height: 29px;
+    font-size: 16px;
+    margin-right: 2px;
 }
 
 .price {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .rating {
@@ -47,8 +45,7 @@
 }
 
 .comments {
-    display: flex;
-    font-size: 20px;
+    font-size: 16px;
     margin: 0 3px;
 }
 
@@ -102,5 +99,113 @@
     height: 0.5px; /* Chiều cao của đường gạch, có thể điều chỉnh theo chiều cao của phần tử cha */
     background-color: black; /* Màu sắc của đường gạch */
     vertical-align: middle; /* Canh giữa theo chiều dọc */
-    margin: 0 10px; /* Khoảng cách giữa đường gạch và phần tử */
+}
+
+.main-detail {
+    /* background-color: rgb(244, 239, 233); */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.name-room {
+    margin: 10px 0 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.inform-room {
+    /* margin: 0 20px; */
+    padding: 30px;
+}
+
+.icon-service {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.icon p {
+    margin-top: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.description .title {
+    font-size: 25px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.content {
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+}
+
+.img-rcm {
+    height: 90px;
+    width: 85px;
+}
+
+.title-rcm {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.title-rcm p {
+    position: absolute;
+    top: 63%;
+    transform: translateY(-50%);
+    margin: 0;
+    font-size: 23px;
+}
+
+.head-rcm {
+    /* background-color: rgb(244, 239, 233); */
+    margin-bottom: 2px;
+    border-radius: 10px;
+}
+
+.recomment-room {
+    /* background-color: rgb(244, 239, 233); */
+    width: 100%;
+    height: auto;
+}
+
+.item-rcm {
+    padding: 15px;
+    display: flex;
+    background-color: rgb(244, 239, 233);
+    margin-bottom: 2px;
+    border-radius: 10px;
+
+    /* justify-content: space-between;d */
+}
+
+.informRoom-rcm {
+    margin-left: 25px;
+}
+
+.informRoom-rcm .post-rcm {
+    text-decoration: none;
+}
+
+.informRoom-rcm .post-rcm p {
+    color: black;
+    font-size: 18px;
+}
+
+.informRoom-rcm #price-rmc {
+    margin: 0;
+    color: #e8a41d;
+    font-size: 18px;
 }

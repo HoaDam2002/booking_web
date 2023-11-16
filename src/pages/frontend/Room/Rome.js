@@ -5,10 +5,56 @@ import { faShower, faTable, faTv, faWifi } from '@fortawesome/free-solid-svg-ico
 import { Link } from 'react-router-dom';
 import SearchHorizontal from '~/components/frontend/SearchHorizontal/SearchHorizontal';
 import Slider from '~/components/frontend/Slider/Slider';
+import Modal from 'react-modal';
+import { useState } from 'react';
+import Sliders from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const cx = classNames.bind(styles);
 
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        width: '80%', // Điều chỉnh chiều rộng của modal
+        height: '85%', // Điều chỉnh chiều cao của modal
+        // margin: 'auto', // Để modal ở giữa trang
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        // overflow: 'hidden',
+    },
+};
+
 function Room() {
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+    //slider-modal
+    var settings = {
+        width: '100%',
+        maxHeight: '500px',
+        // height: '',
+        dots: true,
+        infinite: true,
+        speed: 500,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2500,
+    };
+
     return (
         <>
             <Slider></Slider>
@@ -44,13 +90,13 @@ function Room() {
                                                 <FontAwesomeIcon icon={faShower} />
                                             </i>
                                         </div>
-                                        <Link
+                                        <button
                                             className="btn btn-primary"
                                             style={{ backgroundColor: 'rgb(6, 76, 73)' }}
-                                            to={'/room-details'}
+                                            onClick={openModal}
                                         >
                                             Book Now
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -233,6 +279,53 @@ function Room() {
                     </div>
                 </div>
             </section>
+            <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
+                <div className={cx('row', 'main-modal')}>
+                    <div className="col-12 col-lg-9">
+                        <Sliders {...settings}>
+                            <div className={cx('item-img')}>
+                                <img
+                                    className={cx('img-modal')}
+                                    src="https://decoxdesign.com/upload/images/cac-loai-hinh-khach-san-01-decox-design.jpg"
+                                ></img>
+                            </div>
+                            <div className={cx('item-img')}>
+                                <img
+                                    className={cx('img-modal')}
+                                    src="https://decoxdesign.com/upload/images/cac-loai-hinh-khach-san-01-decox-design.jpg"
+                                ></img>
+                            </div>
+                            <div className={cx('item-img')}>
+                                <img
+                                    className={cx('img-modal')}
+                                    src="https://decoxdesign.com/upload/images/cac-loai-hinh-khach-san-01-decox-design.jpg"
+                                ></img>
+                            </div>
+                            <div className={cx('item-img')}>
+                                <img
+                                    className={cx('img-modal')}
+                                    src="https://decoxdesign.com/upload/images/cac-loai-hinh-khach-san-01-decox-design.jpg"
+                                ></img>
+                            </div>
+                            <div className={cx('item-img')}>
+                                <img
+                                    className={cx('img-modal')}
+                                    src="https://decoxdesign.com/upload/images/cac-loai-hinh-khach-san-01-decox-design.jpg"
+                                ></img>
+                            </div>
+                            <div className={cx('item-img')}>
+                                <img
+                                    className={cx('img-modal')}
+                                    src="https://decoxdesign.com/upload/images/cac-loai-hinh-khach-san-01-decox-design.jpg"
+                                ></img>
+                            </div>
+                        </Sliders>
+                    </div>
+                    <div className="col-12 col-lg-3">
+                        <h1>alo</h1>
+                    </div>
+                </div>
+            </Modal>
         </>
     );
 }
