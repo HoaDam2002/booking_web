@@ -1,7 +1,23 @@
 import classNames from 'classnames/bind';
 import styles from './Room.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShower, faTable, faTv, faWifi } from '@fortawesome/free-solid-svg-icons';
+import {
+    faBanSmoking,
+    faBarChart,
+    faBath,
+    faBed,
+    faBriefcase,
+    faDesktop,
+    faFan,
+    faLightbulb,
+    faPhone,
+    faShower,
+    faTable,
+    faToilet,
+    faTrowel,
+    faTv,
+    faWifi,
+} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import SearchHorizontal from '~/components/frontend/SearchHorizontal/SearchHorizontal';
 import Slider from '~/components/frontend/Slider/Slider';
@@ -9,6 +25,7 @@ import Modal from 'react-modal';
 import { useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import { faDeskpro, faShopware } from '@fortawesome/free-brands-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -325,6 +342,49 @@ function Room() {
                             ứng mọi kỳ nghỉ thư thái của bạn trong một căn phòng khá thoải mái. Phòng này không có tầm
                             nhìn và cửa sổ
                         </p>
+                        <span className={cx('service-room')}>Extensions</span>
+                        <div className={cx('list-service')}>
+                            <div className={cx('item')}>
+                                <FontAwesomeIcon icon={faBriefcase} />
+                                <span className={cx('item-service')}>Cabinet</span>
+                            </div>
+                            <div className={cx('item')}>
+                                <FontAwesomeIcon icon={faBed} />
+                                <span className={cx('item-service')}>Bed</span>
+                            </div>
+                            <div className={cx('item')}>
+                                <FontAwesomeIcon icon={faBanSmoking} />
+                                <span className={cx('item-service')}>No Smoking</span>
+                            </div>
+                            <div className={cx('item')}>
+                                <FontAwesomeIcon icon={faPhone} />
+                                <span className={cx('item-service')}>Phone</span>
+                            </div>
+                            <div className={cx('item')}>
+                                <FontAwesomeIcon icon={faShower} />
+                                <span className={cx('item-service')}>Phone</span>
+                            </div>
+                            <div className={cx('item')}>
+                                <FontAwesomeIcon icon={faDesktop} />
+                                <span className={cx('item-service')}>DeskTop</span>
+                            </div>
+                            <div className={cx('item')}>
+                                <FontAwesomeIcon icon={faLightbulb} />
+                                <span className={cx('item-service')}>Lamp</span>
+                            </div>
+                            <div className={cx('item')}>
+                                <FontAwesomeIcon icon={faWifi} />
+                                <span className={cx('item-service')}>Wifi</span>
+                            </div>
+                            <div className={cx('item')}>
+                                <FontAwesomeIcon icon={faBath} />
+                                <span className={cx('item-service')}>Bathroom</span>
+                            </div>
+                            <div className={cx('item')}>
+                                <FontAwesomeIcon icon={faFan} />
+                                <span className={cx('item-service')}>Fan</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Modal>
