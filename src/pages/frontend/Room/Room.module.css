@@ -75,3 +75,26 @@
     width: 100%;
     height: 100%;
 }
+
+.title-detail {
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-weight: 700;
+}
+
+.separator::after {
+    content: '';
+    display: inline-block;
+    width: 100%; /* Độ dài của đường gạch */
+    height: 0.5px; /* Chiều cao của đường gạch, có thể điều chỉnh theo chiều cao của phần tử cha */
+    background-color: rgba(6, 76, 73, 0.2); /* Màu sắc của đường gạch */
+    vertical-align: middle; /* Canh giữa theo chiều dọc */
+}
+
+.description-room {
+    font-size: 13px;
+    overflow: auto;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    height: 180px;
+}

@@ -7,9 +7,8 @@ import SearchHorizontal from '~/components/frontend/SearchHorizontal/SearchHoriz
 import Slider from '~/components/frontend/Slider/Slider';
 import Modal from 'react-modal';
 import { useState } from 'react';
-import Sliders from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const cx = classNames.bind(styles);
 
@@ -297,7 +296,7 @@ function Room() {
             <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
                 <div className={cx('row', 'main-modal')}>
                     <div className="col-12 col-lg-8">
-                        <Sliders {...settings}>
+                        <Carousel>
                             <div className={cx('item-img')}>
                                 <img
                                     className={cx('img-modal')}
@@ -316,28 +315,16 @@ function Room() {
                                     src="https://decoxdesign.com/upload/images/cac-loai-hinh-khach-san-01-decox-design.jpg"
                                 ></img>
                             </div>
-                            <div className={cx('item-img')}>
-                                <img
-                                    className={cx('img-modal')}
-                                    src="https://decoxdesign.com/upload/images/cac-loai-hinh-khach-san-01-decox-design.jpg"
-                                ></img>
-                            </div>
-                            <div className={cx('item-img')}>
-                                <img
-                                    className={cx('img-modal')}
-                                    src="https://decoxdesign.com/upload/images/cac-loai-hinh-khach-san-01-decox-design.jpg"
-                                ></img>
-                            </div>
-                            <div className={cx('item-img')}>
-                                <img
-                                    className={cx('img-modal')}
-                                    src="https://decoxdesign.com/upload/images/cac-loai-hinh-khach-san-01-decox-design.jpg"
-                                ></img>
-                            </div>
-                        </Sliders>
+                        </Carousel>
                     </div>
                     <div className="col-12 col-lg-4">
-                        <span>Vip Room</span>
+                        <span className={cx('title-detail')}>Vip Room</span>
+                        <div className={cx('separator')}></div>
+                        <p className={cx('description-room')}>
+                            Phòng dành cho 2 người. Được thiết kế sang trọng và hoàn hảo với các tiện nghi hiện đại, đáp
+                            ứng mọi kỳ nghỉ thư thái của bạn trong một căn phòng khá thoải mái. Phòng này không có tầm
+                            nhìn và cửa sổ
+                        </p>
                     </div>
                 </div>
             </Modal>
