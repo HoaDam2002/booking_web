@@ -33,7 +33,7 @@ function Account() {
         <>
             <div className="container-fluid">
                 <div className="row">
-                    <div className={cx('banner', 'd-none', 'd-md-block', 'col-7')}>
+                    <div className={cx('banner', 'd-none', 'd-md-block', 'col-8')}>
                         <img
                             className={cx('banner-img')}
                             src="https://booking.muongthanh.com/images/login-banner.png"
@@ -44,7 +44,7 @@ function Account() {
                             <p>Hưởng nhiều ưu đãi khi đăng ký thành viên </p>
                         </div>
                     </div>
-                    <div className={cx('form', 'col-12', 'col-md-5')}>
+                    <div className={cx('form', 'col-12', 'col-md-4')}>
                         <div className={cx('logo')}>
                             <Link to={'/'}>
                                 <img
