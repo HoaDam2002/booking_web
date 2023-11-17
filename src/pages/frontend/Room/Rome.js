@@ -19,12 +19,12 @@ const customStyles = {
         left: '50%',
         right: 'auto',
         bottom: 'auto',
-        width: '80%', // Điều chỉnh chiều rộng của modal
-        height: '85%', // Điều chỉnh chiều cao của modal
-        // margin: 'auto', // Để modal ở giữa trang
+        width: '80%',
+        height: '95%',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        // overflow: 'hidden',
+        overflow: 'hidden',
+        scroll: '',
     },
 };
 
@@ -41,9 +41,6 @@ function Room() {
 
     //slider-modal
     var settings = {
-        width: '100%',
-        maxHeight: '500px',
-        // height: '',
         dots: true,
         infinite: true,
         speed: 500,
@@ -67,7 +64,10 @@ function Room() {
 
                     <div className="row">
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
+                            <div
+                                className="shadow"
+                                style={{ paddingBottom: '10px', borderRadius: '15px', overflow: 'hidden' }}
+                            >
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -102,7 +102,10 @@ function Room() {
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
+                            <div
+                                className="shadow"
+                                style={{ paddingBottom: '10px', borderRadius: '15px', overflow: 'hidden' }}
+                            >
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -125,19 +128,22 @@ function Room() {
                                                 <FontAwesomeIcon icon={faShower} />
                                             </i>
                                         </div>
-                                        <Link
+                                        <button
                                             className="btn btn-primary"
                                             style={{ backgroundColor: 'rgb(6, 76, 73)' }}
-                                            to={'#'}
+                                            onClick={openModal}
                                         >
                                             Book Now
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
+                            <div
+                                className="shadow"
+                                style={{ paddingBottom: '10px', borderRadius: '15px', overflow: 'hidden' }}
+                            >
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -160,19 +166,22 @@ function Room() {
                                                 <FontAwesomeIcon icon={faShower} />
                                             </i>
                                         </div>
-                                        <Link
+                                        <button
                                             className="btn btn-primary"
                                             style={{ backgroundColor: 'rgb(6, 76, 73)' }}
-                                            to={'#'}
+                                            onClick={openModal}
                                         >
                                             Book Now
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
+                            <div
+                                className="shadow"
+                                style={{ paddingBottom: '10px', borderRadius: '15px', overflow: 'hidden' }}
+                            >
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -195,19 +204,22 @@ function Room() {
                                                 <FontAwesomeIcon icon={faShower} />
                                             </i>
                                         </div>
-                                        <Link
+                                        <button
                                             className="btn btn-primary"
                                             style={{ backgroundColor: 'rgb(6, 76, 73)' }}
-                                            to={'#'}
+                                            onClick={openModal}
                                         >
                                             Book Now
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
+                            <div
+                                className="shadow"
+                                style={{ paddingBottom: '10px', borderRadius: '15px', overflow: 'hidden' }}
+                            >
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -230,19 +242,22 @@ function Room() {
                                                 <FontAwesomeIcon icon={faShower} />
                                             </i>
                                         </div>
-                                        <Link
+                                        <button
                                             className="btn btn-primary"
                                             style={{ backgroundColor: 'rgb(6, 76, 73)' }}
-                                            to={'#'}
+                                            onClick={openModal}
                                         >
                                             Book Now
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-3" style={{ marginBottom: '30px', padding: '0 10px' }}>
-                            <div className="shadow" style={{ paddingBottom: '10px', borderRadius: '15px' }}>
+                            <div
+                                className="shadow"
+                                style={{ paddingBottom: '10px', borderRadius: '15px', overflow: 'hidden' }}
+                            >
                                 <img
                                     className={cx('img-room')}
                                     src="https://www.hotelgrandsaigon.com/wp-content/uploads/sites/227/2017/12/GRAND_PDLK_02.jpg"
@@ -265,13 +280,13 @@ function Room() {
                                                 <FontAwesomeIcon icon={faShower} />
                                             </i>
                                         </div>
-                                        <Link
+                                        <button
                                             className="btn btn-primary"
                                             style={{ backgroundColor: 'rgb(6, 76, 73)' }}
-                                            to={'#'}
+                                            onClick={openModal}
                                         >
                                             Book Now
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +296,7 @@ function Room() {
             </section>
             <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
                 <div className={cx('row', 'main-modal')}>
-                    <div className="col-12 col-lg-9">
+                    <div className="col-12 col-lg-8">
                         <Sliders {...settings}>
                             <div className={cx('item-img')}>
                                 <img
@@ -321,8 +336,8 @@ function Room() {
                             </div>
                         </Sliders>
                     </div>
-                    <div className="col-12 col-lg-3">
-                        <h1>alo</h1>
+                    <div className="col-12 col-lg-4">
+                        <span>Vip Room</span>
                     </div>
                 </div>
             </Modal>

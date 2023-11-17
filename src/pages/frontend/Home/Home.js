@@ -3,10 +3,22 @@ import styles from './Home.module.css';
 import Slider from '~/components/frontend/Slider/Slider';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarMinus, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faCalendarMinus, faClock } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from 'react';
 
 const cx = classNames.bind(styles);
 function Home() {
+    useEffect(() => {
+        const backgroundDivs = document.querySelectorAll(`.${cx('blog-slide')}`);
+
+        backgroundDivs.forEach(function (div) {
+            const backgroundPath = div.getAttribute('data-image');
+            if (backgroundPath) {
+                div.style.backgroundImage = `linear-gradient(100deg, rgba(38, 38, 38, 0.9), transparent, transparent), url(${backgroundPath})`;
+            }
+        });
+    }, []);
+
     return (
         <>
             <Slider />
@@ -187,117 +199,177 @@ function Home() {
                 </div>
             </section>
 
-            <section className={cx('blog')}>
+            {/* <section className={cx('blog')}>
                 <div className={cx('container')}>
-                    <div className={cx('title-blog')}>
-                        <h2>Read Our Blogs</h2>
+                    <div className={cx('blog-wrapper')}>
+                        <div className={cx('blog-control', 'blog-control-left')}>
+                            <button>
+                                <i>
+                                    <FontAwesomeIcon icon={faArrowLeft} />
+                                </i>
+                            </button>
+                        </div>
+                        <div className={cx('row', 'blog-show')}>
+                            <div className={cx('blog-slide', 'col-12')} data-image="/blog.jpg">
+                                <div className={cx('blog-content')}>
+                                    <h3>Tremblant In Canada</h3>
+                                    <p>
+                                        <i>
+                                            <FontAwesomeIcon icon={faClock} />
+                                        </i>{' '}
+                                        15TH APRIL, 2019
+                                    </p>
+                                    <Link to={'/blog'}>
+                                        ReadMore{' '}
+                                        <i>
+                                            <FontAwesomeIcon icon={faArrowRight} />
+                                        </i>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className={cx('blog-slide', 'col-12')} data-image="/blog-demo.jpg">
+                                <div className={cx('blog-content')}>
+                                    <h3>Tremblant In Canada</h3>
+                                    <p>
+                                        <i>
+                                            <FontAwesomeIcon icon={faClock} />
+                                        </i>{' '}
+                                        15TH APRIL, 2019
+                                    </p>
+                                    <Link to={'/blog'}>
+                                        ReadMore{' '}
+                                        <i>
+                                            <FontAwesomeIcon icon={faArrowRight} />
+                                        </i>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className={cx('blog-slide', 'col-12')} data-image="/blog.jpg">
+                                <div className={cx('blog-content')}>
+                                    <h3>Tremblant In Canada</h3>
+                                    <p>
+                                        <i>
+                                            <FontAwesomeIcon icon={faClock} />
+                                        </i>{' '}
+                                        15TH APRIL, 2019
+                                    </p>
+                                    <Link to={'/blog'}>
+                                        ReadMore{' '}
+                                        <i>
+                                            <FontAwesomeIcon icon={faArrowRight} />
+                                        </i>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className={cx('blog-slide', 'col-12')} data-image="/blog.jpg">
+                                <div className={cx('blog-content')}>
+                                    <h3>Tremblant In Canada</h3>
+                                    <p>
+                                        <i>
+                                            <FontAwesomeIcon icon={faClock} />
+                                        </i>{' '}
+                                        15TH APRIL, 2019
+                                    </p>
+                                    <Link to={'/blog'}>
+                                        ReadMore{' '}
+                                        <i>
+                                            <FontAwesomeIcon icon={faArrowRight} />
+                                        </i>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className={cx('blog-slide', 'col-12')} data-image="/blog.jpg">
+                                <div className={cx('blog-content')}>
+                                    <h3>Tremblant In Canada</h3>
+                                    <p>
+                                        <i>
+                                            <FontAwesomeIcon icon={faClock} />
+                                        </i>{' '}
+                                        15TH APRIL, 2019
+                                    </p>
+                                    <Link to={'/blog'}>
+                                        ReadMore{' '}
+                                        <i>
+                                            <FontAwesomeIcon icon={faArrowRight} />
+                                        </i>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={cx('blog-control', 'blog-control-right')}>
+                            <button>
+                                <i>
+                                    <FontAwesomeIcon icon={faArrowRight} />
+                                </i>
+                            </button>
+                        </div>
                     </div>
-                    <div className={cx('row', 'blog-container')}>
-                        <div className={cx('blog-box', 'col-6', 'col-md-4', 'col-lg-3', 'me-5')}>
-                            <div className={cx('info-blog')}>
-                                <Link to={'/blog'} className={cx('image-blog')}>
-                                    <img src="/Picture1.png" />
-                                </Link>
-                                <div className={cx('content-blog')}>
-                                    <Link to={'/blog'} className={cx('name-blog')}>
-                                        <span>Turpis elit in dictum eget eget</span>
-                                    </Link>
-                                    <span className={cx('des-blog')}>
-                                        Convallis eu vel fames feugiat et venenatis nulla ipsum.
-                                    </span>
-                                    <span className={cx('read-time')}>
-                                        <i className={cx('icon-time')}>
+                </div>
+            </section> */}
+
+            <section className={cx('blog')}>
+                <div className={cx('title-service')}>
+                    <h2 className={cx('content-services')}>Our Blogs</h2>
+                    <span className={cx('content-des')}>
+                        We offer modern (5 star) hotel facilities for your comfort.
+                    </span>
+                </div>
+                <div className="container">
+                    <div id="myCarouselBlog" className="carousel slide" data-bs-ride="carousel" data-bs-touch="false">
+                        <div className="carousel-inner">
+                            <div className={cx('carousel-item', 'active', 'blog-slide')} data-image="/blog.jpg">
+                                <div className={cx('blog-content')}>
+                                    <h3>Tremblant In Canada</h3>
+                                    <p>
+                                        <i>
                                             <FontAwesomeIcon icon={faClock} />
+                                        </i>{' '}
+                                        15TH APRIL, 2019
+                                    </p>
+                                    <Link to={'/blog'}>
+                                        ReadMore{' '}
+                                        <i>
+                                            <FontAwesomeIcon icon={faArrowRight} />
                                         </i>
-                                        3 min read
-                                    </span>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className={cx('carousel-item', 'blog-slide')} data-image="/blog-demo.jpg">
+                                <div className={cx('blog-content')}>
+                                    <h3>Tremblant In Canada</h3>
+                                    <p>
+                                        <i>
+                                            <FontAwesomeIcon icon={faClock} />
+                                        </i>{' '}
+                                        15TH APRIL, 2019
+                                    </p>
+                                    <Link to={'/blog'}>
+                                        ReadMore{' '}
+                                        <i>
+                                            <FontAwesomeIcon icon={faArrowRight} />
+                                        </i>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
-                        <div className={cx('blog-box', 'col-6', 'col-md-4', 'col-lg-3', 'me-5')}>
-                            <div className={cx('info-blog')}>
-                                <Link to={'/blog'} className={cx('image-blog')}>
-                                    <img src="/Picture1.png" />
-                                </Link>
-                                <div className={cx('content-blog')}>
-                                    <Link to={'/blog'} className={cx('name-blog')}>
-                                        <span>Turpis elit in dictum eget eget</span>
-                                    </Link>
-                                    <span className={cx('des-blog')}>
-                                        Convallis eu vel fames feugiat et venenatis nulla ipsum.
-                                    </span>
-                                    <span className={cx('read-time')}>
-                                        <i className={cx('icon-time')}>
-                                            <FontAwesomeIcon icon={faClock} />
-                                        </i>
-                                        3 min read
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={cx('blog-box', 'col-6', 'col-md-4', 'col-lg-3', 'me-5')}>
-                            <div className={cx('info-blog')}>
-                                <Link to={'/blog'} className={cx('image-blog')}>
-                                    <img src="/Picture1.png" />
-                                </Link>
-                                <div className={cx('content-blog')}>
-                                    <Link to={'/blog'} className={cx('name-blog')}>
-                                        <span>Turpis elit in dictum eget eget</span>
-                                    </Link>
-                                    <span className={cx('des-blog')}>
-                                        Convallis eu vel fames feugiat et venenatis nulla ipsum.
-                                    </span>
-                                    <span className={cx('read-time')}>
-                                        <i className={cx('icon-time')}>
-                                            <FontAwesomeIcon icon={faClock} />
-                                        </i>
-                                        3 min read
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={cx('blog-box', 'col-6', 'col-md-4', 'col-lg-3', 'me-5')}>
-                            <div className={cx('info-blog')}>
-                                <Link to={'/blog'} className={cx('image-blog')}>
-                                    <img src="/Picture1.png" />
-                                </Link>
-                                <div className={cx('content-blog')}>
-                                    <Link to={'/blog'} className={cx('name-blog')}>
-                                        <span>Turpis elit in dictum eget eget</span>
-                                    </Link>
-                                    <span className={cx('des-blog')}>
-                                        Convallis eu vel fames feugiat et venenatis nulla ipsum.
-                                    </span>
-                                    <span className={cx('read-time')}>
-                                        <i className={cx('icon-time')}>
-                                            <FontAwesomeIcon icon={faClock} />
-                                        </i>
-                                        3 min read
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={cx('blog-box', 'col-6', 'col-md-4', 'col-lg-3', 'me-5')}>
-                            <div className={cx('info-blog')}>
-                                <Link to={'/blog'} className={cx('image-blog')}>
-                                    <img src="/Picture1.png" />
-                                </Link>
-                                <div className={cx('content-blog')}>
-                                    <Link to={'/blog'} className={cx('name-blog')}>
-                                        <span>Turpis elit in dictum eget eget</span>
-                                    </Link>
-                                    <span className={cx('des-blog')}>
-                                        Convallis eu vel fames feugiat et venenatis nulla ipsum.
-                                    </span>
-                                    <span className={cx('read-time')}>
-                                        <i className={cx('icon-time')}>
-                                            <FontAwesomeIcon icon={faClock} />
-                                        </i>
-                                        3 min read
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                        <button
+                            className="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#myCarouselBlog"
+                            data-bs-slide="prev"
+                        >
+                            <span className="carousel-control-prev-icon" aria-hidden="true" />
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                            className="carousel-control-next"
+                            type="button"
+                            data-bs-target="#myCarouselBlog"
+                            data-bs-slide="next"
+                        >
+                            <span className="carousel-control-next-icon" aria-hidden="true" />
+                            <span className="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </section>
