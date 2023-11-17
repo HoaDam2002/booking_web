@@ -72,7 +72,7 @@ function Header() {
                                 </Link>
                             </li>
                             <li className={cx('nav-item', 'mx-1')}>
-                                <Link className={cx('nav-link', 'px-3', 'btn-login')} to="/âsas">
+                                <Link className={cx('nav-link', 'px-3', 'btn-login')} to="/login">
                                     Login
                                 </Link>
                             </li>
@@ -143,14 +143,14 @@ function Header() {
                                     About
                                 </Link>
                             </li>
-                            {/* <li className={cx("nav-mobile-item")}>
-                                <Link to={""} className={cx("nav-mobile-link")}>
+                            <li className={cx('nav-mobile-item')}>
+                                <Link to={'/login'} className={cx('nav-mobile-link')}>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRightToBracket} size="xs" />
-                                    </i>{" "}
+                                    </i>{' '}
                                     Login
                                 </Link>
-                            </li> */}
+                            </li>
                             <li className={cx('nav-mobile-item')}>
                                 <Link to={''} className={cx('nav-mobile-link')}>
                                     <i>
