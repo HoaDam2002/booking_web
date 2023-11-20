@@ -67,7 +67,7 @@ function Account() {
                                 <Link to={'/register'}>Register</Link>
                             </button>
                         </div>
-                        <div className={cx('form-item')}>
+                        <form className={cx('form-item', 'needs-validation')}>
                             <div>
                                 {renderForm()}
 
@@ -91,7 +91,7 @@ function Account() {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

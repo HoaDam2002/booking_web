@@ -6,7 +6,10 @@ function App(props) {
     const location = useLocation();
     const isLoginPage = location.pathname === '/login';
     const isRegisterPage = location.pathname === '/register';
+    const isAdmin = location.pathname === '/admin/dashboard';
     if (isLoginPage || isRegisterPage) {
+        return <>{props.children}</>;
+    } else if (isAdmin) {
         return <>{props.children}</>;
     }
     return (

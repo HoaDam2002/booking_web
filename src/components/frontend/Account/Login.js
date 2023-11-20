@@ -15,10 +15,12 @@ function Login() {
                     placeholder="name@example.com"
                 />
                 <label htmlFor="floatingInput">Email address</label>
+                <div class="invalid-feedback">Please choose a username.</div>
             </div>
             <div className="form-floating mb-3">
                 <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
                 <label htmlFor="floatingPassword">Password</label>
+                <div class="invalid-feedback">Please choose a username.</div>
             </div>
             <div className={cx('mb-3', 'form-check', 'form-check-custom')}>
                 <div>

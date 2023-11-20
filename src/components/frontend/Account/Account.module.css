@@ -70,6 +70,11 @@
 
 .form-btn:hover {
     background-color: rgba(6, 69, 71, 0.9);
+    color: #fff;
+}
+
+.form-btn:active {
+    background-color: rgb(6, 69, 71) !important;
 }
 
 .form-btn a {
